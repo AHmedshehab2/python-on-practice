@@ -1,6 +1,7 @@
-n = int(input())
-nums = [int(input()) for _ in range(n)]
-# Find and print the second largest unique value
-nums.sort(reverse=True)
-unique_nums = list(set(nums))
-print(unique_nums[1] if len(unique_nums) > 2 else unique_nums[0])
+text = input()
+# Count word frequencies and print each in first-seen order
+count = {}
+for word in text.split():
+  count[word] = count.get(word,0) + 1
+for k,y in count.items():
+  print(f"{k} {y}")
