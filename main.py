@@ -3,7 +3,7 @@ def is_plaindorme(x :str)-> bool:
 
 
 x = input()
-if is_plaindorme == True:
+if is_plaindorme(x) == True:
   print("yes")
 else :
   print("no")
