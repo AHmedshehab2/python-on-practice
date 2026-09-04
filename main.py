@@ -1,10 +1,13 @@
-def is_plaindorme(x :str)-> bool:
-  cleaned = "".join(char.lower() for char in x if char.isalnum())
-    
-  return cleaned == cleaned[::-1]
+def average(*nums):
+    return sum(nums) / len(nums)
 
-x = input()
-if is_plaindorme(x) == True:
-  print("yes")
-else :
-  print("no")
+
+n = int(input().strip())
+
+numbers = []
+while len(numbers) < n:
+    line_values = [float(x) for x in input().split()]
+    numbers.extend(line_values)
+
+result = average(*numbers)
+print(f"{result:.2f}")
